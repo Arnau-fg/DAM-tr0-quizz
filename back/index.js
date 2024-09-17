@@ -26,6 +26,10 @@ app.get('/win', (req, res) => {
    const directoryAnswers = path.join(__dirname, "answers");
    const directoryPath = path.join(directoryAnswers, directoryName);
 
+   if (!fs.existsSync("answers")) {
+      fs.mkdirSync("answers");
+   }
+
    if (!fs.existsSync(directoryPath)) {
       fs.mkdirSync(directoryPath);
    }
