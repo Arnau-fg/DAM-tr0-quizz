@@ -2,9 +2,13 @@ const express = require('express')
 const file = require("./JSON/preguntes.json")
 const fs = require('fs');
 const path = require('path');
+const bodyParser = require('body-parser');
 const app = express()
 const port = 3000
 
+app.use(express.json()); //permet rebre json per crides
+
+// inici joc
 
 app.get('/', (req, res) => {
    let gameQuestions = file.preguntes;
@@ -19,6 +23,7 @@ app.get('/', (req, res) => {
    res.send(formattedGameQuestions)
 });
 
+// respostes
 
 app.get('/win', (req, res) => {
    const currentDate = new Date();
@@ -41,6 +46,59 @@ app.get('/win', (req, res) => {
    fs.writeFileSync(filePath, 'Your file content here');
 
    res.send('File created successfully');
+});
+
+// ------------------- CRUD -------------------
+
+// Create
+app.post('/createQuestion', (req, res) => {
+   console.log(req.body);
+
+   let newQuestion = {
+      id: file.preguntes[file.preguntes.length - 1].id + 1,
+      pregunta: req.body.pregunta,
+      respostes: req.body.respostes
+   }
+
+   file.preguntes.push(newQuestion);
+
+   fs.writeFileSync('./JSON/preguntes.json', JSON.stringify(file, null, 2));
+
+   res.send(req.body)
+});
+
+// Read
+app.get('/readOne', (req, res) => {
+   let idToFind = req.query.id;
+
+   let question = file.preguntes.find(pregunta => pregunta.id == idToFind);
+
+   if (question) {
+      res.send({
+         foundQuestion: true,
+         question: question
+      });
+   } else {
+      res.send({
+         foundQuestion: false,
+         question: {}
+      });
+   }
+});
+
+// Read All
+app.get('/readAll', (req, res) => {
+   res.send(file.preguntes);
+});
+
+// Update
+app.put('/update', (req, res) => {
+   res.send('Update')
+});
+
+// Delete
+app.delete('/delete', (req, res) => {
+   res.send('Delete')
 });
 
 

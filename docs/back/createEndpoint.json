@@ -1,0 +1,29 @@
+{
+    "pregunta": "Quina marca de cotxes utilitza el lema 'Ultimate Driving Machine'?",
+    "respostes": [
+        {
+            "id": 0,
+            "resposta": "BMW",
+            "correcta": true,
+            "imatge": "https://exemple.com/bmw.jpg"
+        },
+        {
+            "id": 1,
+            "resposta": "Mercedes-Benz",
+            "correcta": false,
+            "imatge": "https://exemple.com/mercedes.jpg"
+        },
+        {
+            "id": 2,
+            "resposta": "Audi",
+            "correcta": false,
+            "imatge": "https://exemple.com/audi.jpg"
+        },
+        {
+            "id": 3,
+            "resposta": "Lexus",
+            "correcta": false,
+            "imatge": "https://exemple.com/lexus.jpg"
+        }
+    ]
+}
