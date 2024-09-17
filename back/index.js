@@ -1,35 +1,90 @@
-const express = require('express')
-const file = require("./JSON/preguntes.json")
+const express = require('express');
+// const textFile = require("./JSON/preguntes.json");
+// const file = JSON.parse(textFile);
+const file = require("./JSON/preguntes.json");
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const { v4: uuidv4 } = require('uuid');
 const app = express()
 const port = 3000
+let playerStates = [];
 
-app.use(express.json()); //permet rebre json per crides
+
+// app.use(bodyParser.json()); // support json encoded bodies
+// app.use(express.urlencoded({ extended: true })); // support encoded bodies
+app.use(express.json()); //support regular json
 
 // inici joc
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
    let gameQuestions = file.preguntes;
    let formattedGameQuestions = [];
+   const numOfQuestions = req.body.numOfQuestions || 10;
+   
+   const sessionToken = getSessionToken(req.body.token);
 
    randomizeArray(gameQuestions);
 
-   gameQuestions.forEach(pregunta => {
+   const slicedGameQuestions = gameQuestions.slice(0, numOfQuestions);
+
+   slicedGameQuestions.forEach(pregunta => {
       formattedGameQuestions.push(questionFormatter(pregunta));
    });
 
-   res.send(formattedGameQuestions)
+   playerStates[sessionToken] = slicedGameQuestions;
+
+   console.log(playerStates);
+
+   res.send({
+      token: sessionToken,
+      formattedGameQuestions
+   })
 });
 
 // respostes
 
-app.get('/win', (req, res) => {
+app.post('/finalitza', (req, res) => {
    const currentDate = new Date();
    const directoryName = currentDate.toISOString().split('T')[0];
    const directoryAnswers = path.join(__dirname, "answers");
    const directoryPath = path.join(directoryAnswers, directoryName);
+
+   const sessionToken = req.body.token;
+
+   if (!playerStates[sessionToken]) {
+      res.send({
+         valid: false,
+      });
+      return;
+   }
+
+   if (!req.body.answers) {
+      res.send({
+         valid: false,
+      });
+      return;
+   }
+
+   const playerAnswers = req.body.answers;
+
+   let encertades = 0;
+   const totals = playerStates[sessionToken].length;
+
+   playerAnswers.forEach((answer, index) => {
+      const respostaCorrecta = playerStates[sessionToken][index].respostes.find(resposta => {
+         return resposta.correcta == true;
+      });
+      if (answer == respostaCorrecta.id) {
+         encertades++;
+      }
+   });
+
+   let playerScore = {
+      encertades,
+      totals
+   }
+
 
    if (!fs.existsSync("answers")) {
       fs.mkdirSync("answers");
@@ -43,9 +98,12 @@ app.get('/win', (req, res) => {
    const fileName = `${filesInDirectory.length + 1}.json`;
    const filePath = path.join(directoryPath, fileName);
 
-   fs.writeFileSync(filePath, 'Your file content here');
+   fs.writeFileSync(filePath, JSON.stringify(playerScore));
 
-   res.send('File created successfully');
+   res.send({
+      valid: true,
+      playerScore
+   });
 });
 
 // ------------------- CRUD -------------------
@@ -62,7 +120,7 @@ app.post('/createQuestion', (req, res) => {
 
    file.preguntes.push(newQuestion);
 
-   fs.writeFileSync('./JSON/preguntes.json', JSON.stringify(file, null, 2));
+   fs.writeFileSync('./JSON/preguntes.json', file);
 
    res.send(req.body)
 });
@@ -101,6 +159,14 @@ app.delete('/delete', (req, res) => {
    res.send('Delete')
 });
 
+
+function getSessionToken(token) {
+   if (!token) {
+      token = uuidv4();
+   }
+
+   return token;
+}
 
 function questionFormatter(question) {
    let formattedQuestion, formattedAnswers;
