@@ -23,7 +23,8 @@ app.get('/', (req, res) => {
 app.get('/win', (req, res) => {
    const currentDate = new Date();
    const directoryName = currentDate.toISOString().split('T')[0];
-   const directoryPath = path.join(__dirname, directoryName);
+   const directoryAnswers = path.join(__dirname, "answers");
+   const directoryPath = path.join(directoryAnswers, directoryName);
 
    if (!fs.existsSync(directoryPath)) {
       fs.mkdirSync(directoryPath);

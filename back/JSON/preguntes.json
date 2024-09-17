@@ -1,0 +1,606 @@
+{
+    "preguntes": [
+        {
+            "id": 0,
+            "pregunta": "Quina marca de cotxes utilitza el lema 'Ultimate Driving Machine'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "BMW",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Mercedes-Benz",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mercedes.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "pregunta": "Quina marca de cotxes és coneguda per la seva sèrie 'A' que inclou el model A4?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Audi",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Subaru",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/subaru.jpg"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "pregunta": "Quina marca de cotxes té el model 'Mustang'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Ford",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/ford.jpg"
+                }
+                ,
+                {
+                    "id": 1,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "pregunta": "Quina marca de cotxes és famosa per la seva línia de models 'RX'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Lexus",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Ferrari",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/ferrari.jpg"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "pregunta": "Quina marca és coneguda per l'ús del logo de quatre anells entrelligats?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Audi",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Mercedes-Benz",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mercedes.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Volkswagen",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/volkswagen.jpg"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "pregunta": "Quina marca de cotxes té el model 'Civic'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Honda",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/honda.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Subaru",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/subaru.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Renault",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/renault.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Mazda",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mazda.jpg"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "pregunta": "Quina marca de cotxes ofereix el model '911'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Porsche",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/porsche.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Ferrari",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/ferrari.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "pregunta": "Quina marca de cotxes utilitza el lema 'The Best or Nothing'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Mercedes-Benz",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/mercedes.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "pregunta": "Quina marca és coneguda per la seva línia de models 'Q'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Audi",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Subaru",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/subaru.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Mazda",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mazda.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Volkswagen",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/volkswagen.jpg"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "pregunta": "Quina marca ofereix el model 'C-Class'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Mercedes-Benz",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/mercedes.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Renault",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/renault.jpg"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "pregunta": "Quina marca de cotxes és famosa per tenir el model 'Lambo'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Lamborghini",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/lamborghini.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Ferrari",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/ferrari.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Subaru",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/subaru.jpg"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "pregunta": "Quina marca de cotxes té el model 'Impreza'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Subaru",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/subaru.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Mazda",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mazda.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Volkswagen",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/volkswagen.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Renault",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/renault.jpg"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "pregunta": "Quina marca és coneguda per la seva línia de models 'A4', 'A6' i 'A8'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Audi",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Mazda",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mazda.jpg"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "pregunta": "Quina marca de cotxes és famosa pel seu model 'LaFerrari'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Ferrari",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/ferrari.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Lamborghini",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lamborghini.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Subaru",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/subaru.jpg"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "pregunta": "Quina marca de cotxes utilitza el lema 'Zoom-Zoom'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Mazda",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/mazda.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Volkswagen",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/volkswagen.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "pregunta": "Quina marca ofereix el model 'Jetta'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Volkswagen",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/volkswagen.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Renault",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/renault.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Mazda",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mazda.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Subaru",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/subaru.jpg"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "pregunta": "Quina marca de cotxes és coneguda per la seva línia de models 'L' i 'NX'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Lexus",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Mazda",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mazda.jpg"
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "pregunta": "Quina marca ofereix el model 'Model S'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Tesla",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/tesla.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "BMW",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "pregunta": "Quina marca de cotxes és coneguda per la seva línia de models 'M'?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "BMW",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/bmw.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Mercedes-Benz",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mercedes.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Lexus",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "pregunta": "Quin logo correspon a Lexus?",
+            "respostes": [
+                {
+                    "id": 0,
+                    "resposta": "Lexus",
+                    "correcta": true,
+                    "imatge": "https://exemple.com/lexus.jpg"
+                },
+                {
+                    "id": 1,
+                    "resposta": "Audi",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/audi.jpg"
+                },
+                {
+                    "id": 2,
+                    "resposta": "Mercedes-Benz",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/mercedes.jpg"
+                },
+                {
+                    "id": 3,
+                    "resposta": "Tesla",
+                    "correcta": false,
+                    "imatge": "https://exemple.com/tesla.jpg"
+                }
+                
+            ]
+        }
+    ]
+}
