@@ -12,7 +12,7 @@
                 },
                 {
                     "id": 1,
-                    "resposta": "Mercedes-Benz",
+                    "resposta": "Mercedes",
                     "correcta": false,
                     "imatge": "https://exemple.com/mercedes.jpg"
                 },
@@ -133,7 +133,7 @@
                 },
                 {
                     "id": 1,
-                    "resposta": "Mercedes-Benz",
+                    "resposta": "Mercedes",
                     "correcta": false,
                     "imatge": "https://exemple.com/mercedes.jpg"
                 },
@@ -217,7 +217,7 @@
             "respostes": [
                 {
                     "id": 0,
-                    "resposta": "Mercedes-Benz",
+                    "resposta": "Mercedes",
                     "correcta": true,
                     "imatge": "https://exemple.com/mercedes.jpg"
                 },
@@ -277,7 +277,7 @@
             "respostes": [
                 {
                     "id": 0,
-                    "resposta": "Mercedes-Benz",
+                    "resposta": "Mercedes",
                     "correcta": true,
                     "imatge": "https://exemple.com/mercedes.jpg"
                 },
@@ -559,7 +559,7 @@
                 },
                 {
                     "id": 2,
-                    "resposta": "Mercedes-Benz",
+                    "resposta": "Mercedes",
                     "correcta": false,
                     "imatge": "https://exemple.com/mercedes.jpg"
                 },
@@ -589,7 +589,7 @@
                 },
                 {
                     "id": 2,
-                    "resposta": "Mercedes-Benz",
+                    "resposta": "Mercedes",
                     "correcta": false,
                     "imatge": "https://exemple.com/mercedes.jpg"
                 },

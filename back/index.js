@@ -4,6 +4,7 @@ const express = require('express');
 const file = require("./JSON/preguntes.json");
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
 const app = express()
@@ -11,9 +12,8 @@ const port = 3000
 let playerStates = [];
 
 
-// app.use(bodyParser.json()); // support json encoded bodies
-// app.use(express.urlencoded({ extended: true })); // support encoded bodies
 app.use(express.json()); //support regular json
+app.use(cors());
 
 // inici joc
 
