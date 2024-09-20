@@ -21,7 +21,7 @@ app.post('/', (req, res) => {
    let gameQuestions = file.preguntes;
    let formattedGameQuestions = [];
    const numOfQuestions = req.body.numOfQuestions || 10;
-   
+
    const sessionToken = getSessionToken(req.body.token);
 
    randomizeArray(gameQuestions);
@@ -109,7 +109,7 @@ app.post('/finalitza', (req, res) => {
 // ------------------- CRUD -------------------
 
 // Create
-app.post('/createQuestion', (req, res) => {
+app.post('/preguntes', (req, res) => {
    console.log(req.body);
 
    let newQuestion = {
@@ -126,37 +126,90 @@ app.post('/createQuestion', (req, res) => {
 });
 
 // Read
-app.get('/readOne', (req, res) => {
-   let idToFind = req.query.id;
+app.get('/preguntes/:id', (req, res) => {
+   let objToSend = {};
+
+   if (req.params.id) {
+      let idToFind = req.params.id;
+
+      let question = file.preguntes.find(pregunta => pregunta.id == idToFind);
+
+      if (question) {
+         objToSend = {
+            foundQuestion: true,
+            question: question
+         }
+      } else {
+         objToSend = {
+            foundQuestion: false,
+            question: {}
+         }
+      }
+   }
+
+   res.send(JSON.stringify(objToSend));
+
+
+});
+
+// Read All
+app.get('/preguntes', (req, res) => {
+   res.send(file.preguntes)
+});
+
+// Update
+app.put('/preguntes/:id', (req, res) => {
+
+   let response = {};
+   
+   let idToFind = req.params.id;
 
    let question = file.preguntes.find(pregunta => pregunta.id == idToFind);
 
    if (question) {
-      res.send({
-         foundQuestion: true,
-         question: question
-      });
+      question.pregunta = req.body.pregunta;
+      question.respostes = req.body.respostes;
+      response = {
+         updated: true,
+         error: null
+      }
    } else {
-      res.send({
-         foundQuestion: false,
-         question: {}
-      });
+      response = {
+         updated: false,
+         error: "Question not found"
+      }
    }
-});
 
-// Read All
-app.get('/readAll', (req, res) => {
-   res.send(file.preguntes);
-});
+   fs.writeFileSync('./JSON/preguntes.json', file);
 
-// Update
-app.put('/update', (req, res) => {
-   res.send('Update')
+   res.send(response);
 });
 
 // Delete
-app.delete('/delete', (req, res) => {
-   res.send('Delete')
+app.delete('/preguntes/:id', (req, res) => {
+   
+   let response = {};
+
+   let idToFind = req.params.id;
+
+   let questionIndex = file.preguntes.findIndex(pregunta => pregunta.id == idToFind);
+
+   if (questionIndex != -1) {
+      file.preguntes.splice(questionIndex, 1);
+      response = {
+         deleted: true,
+         error: null
+      }
+   } else {
+      response = {
+         deleted: false,
+         error: "Question not found"
+      }
+   }
+
+   fs.writeFileSync('./JSON/preguntes.json', file);
+
+   res.send(response);
 });
 
 
